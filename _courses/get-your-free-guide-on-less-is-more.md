@@ -1,13 +1,10 @@
 ---
 layout: page
-title: Less is more course
+title: 7 part guide to Less is More
 seo:
   type: NewsArticle
 comments: true
 ---
-### 7 part guide to Less is More
-
-
 The number one frustration among doctors is -- Long working hours!
 
 That is the sad state of affairs in healthcare. As an industry, we seem to have forgotten that we are human beings and not machines.
