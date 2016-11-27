@@ -14,11 +14,11 @@ layout: default
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
         <div class="article-item">
           <header class="post-header">
-            <h2 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+            <h4 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a></h4>
           </header>
-          <section class="post-excerpt" itemprop="description">
+          <!--section class="post-excerpt" itemprop="description">
             <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-          </section>
+          </section-->
           <div class="post-meta">
             <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
           </div>
@@ -27,7 +27,7 @@ layout: default
     {% endfor %}
   </div>
 
-  <nav class="pagination" role="navigation">
+  <!--nav class="pagination" role="navigation">
     {% if paginator.next_page %}
       <a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.next_page}}">&larr; Older posts</a>
     {% else %}
@@ -43,7 +43,7 @@ layout: default
     {% else %}
       <a class="older-posts disabled">Newer posts &rarr;</a>
     {% endif %}
-  </nav>
+  </nav-->
 
 </main>
 

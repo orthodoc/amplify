@@ -3,6 +3,10 @@
 
 $grey-color:       #828282;
 
+.underline {
+  text-decoration: underline;
+}
+
 .icon {
 
     > svg {
@@ -30,6 +34,9 @@ $rs: 16px;
 $font-serif: Georgia,Cambria,"Times New Roman",Times,'Lora', serif;
 $font-sans: "Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-serif;
 
+$font-body: "Arimo", "Open Sans", "Helvetica Neue", "sans-serif";
+$font-heading: "Hind", "Open Sans", "sans-serif";
+
 @mixin respond-to($breakpoint) {
   @media only screen and (max-width: $breakpoint + px) {
     @content;
@@ -37,7 +44,7 @@ $font-sans: "Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 // Only needed for syntax highlighting
-%vertical-rhythm {
+vertical-rhythm {
   margin-bottom: $rs;
 }
 
@@ -47,7 +54,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: $font-sans;
+  font-family: $font-body;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -158,6 +165,7 @@ body {
       color: #666665;
     }
     .post-meta {
+      display: none;
       font-size: 14px;
       color: #b3b3b1;
       line-height: 30px;
@@ -221,7 +229,7 @@ body {
 
 .post {
   .post-meta {
-    font-family: $font-sans;
+    font-family: $font-body;
   }
   .post-title {
     font-weight: 700;
@@ -252,17 +260,17 @@ body {
     font-style: normal;
     font-size: 14px;
     overflow: hidden;
-    font-family: $font-sans;
+    font-family: $font-body;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
   .post-content {
     width: 100%;
-    font-family: $font-serif;
+    font-family: $font-body;
     color: #333333;
     h1, h2, h3 {
-      font-family: $font-sans;
+      font-family: $font-heading;
     }
     h3, h4, h5, h6 {
       letter-spacing: -0.02em;
@@ -270,9 +278,9 @@ body {
       font-style: normal;
       font-size: 24px;
       line-height: 1.3;
-      margin-top: 50px;
+      //  margin-top: 50px;
       margin-bottom: 0px;
-      font-family: $font-sans;
+      font-family: $font-body;
     }
     h3 {
       font-size: 36px;
@@ -361,20 +369,31 @@ body {
       font-style: normal;
       font-size: 23px;
       line-height: 30px;
-      margin-left: 30px;
+      margin-left: 15px;
       margin-bottom: 12px;
       padding-top: 2px;
       p {
         padding: 0 0 golden-ratio(1rem, 1);
       }
     }
-    ol li {
+    li:first-child {
+      margin-top: 12px;
+    }
+    ol {
       list-style-type: decimal;
+    }
+    li {
+      list-style: none;
+    }
+    li:before {
+    content: "+";
+    padding-right: 8px;
+    color: #ab3e16;
     }
   }
   .bottom-teaser {
     padding: 50px 0 0 0;
-    font-family: $font-sans;
+    font-family: $font-body;
     hr {
       border: 0;
       padding: 0;
@@ -517,6 +536,7 @@ pre {
   }
 }
 
-.pagination .disabled {
-    opacity: 0;
+.ck_form .ck_form_title {
+  margin-top: 0px;
+  padding-top: 0px;
 }

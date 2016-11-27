@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 <main class="content" role="main">
   <article class="post">
@@ -17,6 +18,16 @@ layout: default
           Share on
           {% include icon-twitter.html %}
         </a>
+      </section>
+      <section class="comments">
+        {% if page.comments %}
+          <amp-iframe width=600 height=140
+            layout="responsive"
+            sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+            resizable
+            src="https://s3.ap-south-1.amazonaws.com/comments.themedicaltoolkit.com/comments.html?{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+          </amp-iframe>
+        {% endif %}
       </section>
     </footer>
     <div class="bottom-teaser cf">
@@ -41,10 +52,9 @@ layout: default
             </span>
           </p>
           <hr>
-          <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
+          <!--p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p-->
         </section>
       </div>
-      {{/post}}
       <div class="isRight">
         <h5 class="index-headline featured"><span>Supported by</span></h5>
         <footer class="site-footer">

@@ -6,22 +6,23 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Awesome Site Title
-email: your-email@domain.com
+title: The Medical Toolkit
+email: bdbaruah@orthodoc.in
 description: >
-  Awesome site description here
-logo: "/assets/images/logo.jpg"
+  A Doctor's Ultimate Survival Guide in the Digital Space
+logo: "/assets/images/logo.png"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+#url: "https://themedicaltoolkit.com" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
 
-name: 'Your Name'
+name: 'Biswajit Baruah'
 bio: >
-  Mea suas vituperatoribus et, virtute corpora quaestio cum ut.
-  Ne solet nostrum complectitur pri, vis ut inani populo.
+  Hip Replacement Surgeon from Chennai.
+  Developer of Diagnox mobile app.
+  Wannabe long distance runner.
 author_image: "/assets/images/author.jpg"
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: 0rthodoc
+github_username:  orthodoc
 
 # Build settings
 markdown: kramdown
@@ -31,3 +32,31 @@ kramdown:
 
 gems:
   - jekyll-paginate
+  - emoji_for_jekyll
+  - jekyll-compose
+  # - jekyll-minifier
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+collections:
+  courses:
+    output: true
+    permalink: /courses/:path/
+    title: Courses
+
+include: ["_pages"]
+
+# seo options
+twitter:
+  username: 0rthodoc
+facebook:
+  publisher: medtoolkit
+social:
+  name: Biswajit D Baruah
+  links:
+    - https://twitter.com/0rthodoc
+    - https://www.facebook.com/medtoolkit
+    - https://www.linkedin.com/bdbaruah
+    - https://github.com/orthodoc
+    - https://plus.google.com/bdbaruah
