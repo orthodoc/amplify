@@ -24,8 +24,21 @@ You'll want to set your site's title, your name, your twitter username, etc.
 *Step 5:* Run `bundle exec jekyll serve` and then open
 [http://localhost:4000/](http://localhost:4000/) to see your site!
 
+*Step 7:* Build the site
+
+- `mv _config_prod_sample.yml to _config_prod.yml`
+- Fill in the `_config_prod.yml` file with the production variables
+- Clean up the folders: `bundle exec jekyll clean`
+- Build the site: `bundle exec jekyll build --config=_config.yml,_config_prod.yml`
+
 *Step 6:* Publish your site
 [just like any other Jekyll site](https://jekyllrb.com/docs/deployment-methods/).
+Specifically for this project:
+
+- `mv s3_website.sample.yml s3_website.yml`
+- `mv .sample.env .env`
+- Fill in `s3_website.yml` and .env with production variables related to AWS S3 bucket
+- Push the site with: `s3_website push`
 
 ## Google AMP Limitations
 
