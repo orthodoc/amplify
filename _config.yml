@@ -1,19 +1,12 @@
-# Welcome to Amplified for Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
+environment: development
 title: The Medical Toolkit
 email: bdbaruah@orthodoc.in
 description: >
   A Doctor's Ultimate Survival Guide in the Digital Space
 logo: "/assets/images/logo.png"
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "https://themedicaltoolkit.com" # the base hostname & protocol for your site
-paginate:	5 # The number of posts to show per page on your homepage
+# paginate:	5 # The number of posts to show per page on your homepage
 
 name: 'Biswajit Baruah'
 bio: >
@@ -31,7 +24,7 @@ kramdown:
   parse_block_html: true
 
 gems:
-  - jekyll-paginate
+  # - jekyll-paginate
   - emoji_for_jekyll
   - jekyll-compose
   # - jekyll-minifier
@@ -44,8 +37,13 @@ collections:
     output: true
     permalink: /courses/:path/
     title: Courses
+  articles:
+    output: true
+    permalink: /articles/:path/
+    title: Articles
 
 include: ["_pages"]
+exclude: ['CNAME', 's3_website.yml']
 
 # seo options
 twitter:

@@ -137,7 +137,7 @@ body {
   }
 
   article {
-    padding: 20px 0;
+    padding: 0 0 20px 0;
     border-bottom: 1px solid #f2f2f0;
     &:last-child {
       border-bottom: 0px;
@@ -168,7 +168,7 @@ body {
     }
     .post-meta {
       display: block;
-      font-size: 18px;
+      font-size: 16px;
       color: #999999;
       line-height: 1.5;
       a {
@@ -391,6 +391,17 @@ body {
     content: "+";
     padding-right: 8px;
     color: #ab3e16;
+    }
+    ul.article-list {
+      li {
+        a {
+          text-decoration: none;
+        }
+        span {
+          color: #999999;
+          font-size: 16px;
+        }
+      }
     }
   }
   .bottom-teaser {

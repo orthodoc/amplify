@@ -2,11 +2,9 @@
 layout: page
 title:
 permalink: /landing/
-redirect_from:
-  - /
 ---
 
-[<amp-img width="600" height="300" layout="responsive" src="/assets/images/landing_headlines.png"></amp-img>]({{"/courses/get-your-free-guide-on-less-is-more" | relative_url }})
+[<amp-img width="600" height="300" layout="responsive" src="/assets/images/landing_headlines.png"></amp-img>]({{"/courses/get-your-free-guide-on-less-is-more/index.html" | relative_url }})
 
 You took the mandatory med courses. You spent quality time diligently following what your teachers taught you. You are not deficient in skills. You were different from your techy friends. You wanted to make an impact in the lives of people.
 
@@ -16,21 +14,19 @@ The world has transformed while you were busy pouring yourself over medical book
 
 You don't have to tread the lonely path anymore! Welcome.
 
-{% if site.articles %}
-  {% for article in site.articles limit: 7 %}
-    <article class="post" itemscope itemtype="http://schema.org/Article" role="article">
-      <div class="article-item">
-        <header class="post-header">
-          <h4 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ article.url }}" itemprop="url">{{ article.title }}</a></h4>
-        </header>
-        <!--section class="post-excerpt" itemprop="description">
-          <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-        </section-->
-        <div class="post-meta">
-          <time datetime="{{ article.date | date_to_long_string }}">{{ article.date | date_to_long_string }}</time>
-        </div>
-      </div>
-    </article>
+[Start here.](/courses/get-your-free-guide-on-less-is-more/index.html)
+
+---------------------
+{% if site.articles[0] %}
+#### Articles that may interest you
+
+  <ul>
+  {% for article in site.articles limit: 3 %}
+    <li>
+      <a href="{{ site.baseurl }}{{ article.url }}index.html">
+        {{ article.title }}
+      </a>
+    </li>
   {% endfor %}
 {% else %}
   <script async id="_ck_130134" src="https://forms.convertkit.com/130134?v=6"></script>

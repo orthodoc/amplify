@@ -3,3 +3,6 @@ _site
 .jekyll-metadata
 .DS_Store
 comments.html
+.env
+CNAME
+s3_website.yml
