@@ -2,6 +2,9 @@
 <html ⚡ lang="en">
   {% include head.html %}
   <body>
+    {% if site.environment == 'production' %}
+      {% include google_tag_manager.html %}
+    {% endif %}
     {% include header.html %}
 
     {{ content }}
