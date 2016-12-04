@@ -46,7 +46,7 @@ cloudfront_distribution_config:
  aliases:
    quantity: 1
    items:
-     CNAME: www.website.com
+     CNAME: <%= ENV['CLOUDFRONT_ALIAS_CNAME'] %>
 
 # cloudfront_invalidate_root: true
 

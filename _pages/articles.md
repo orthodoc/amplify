@@ -4,12 +4,12 @@
   permalink: /articles/
 ---
 {% if site.articles[0] %}
-### Articles
+<h3 class="post-title">Articles</h3>
 
 <ul class="article-list">
   {% for article in site.articles %}
     <li>
-      <a href="{{ site.baseurl }}{{ article.url }}index.html">
+      <a href="{{ site.baseurl }}{{ article.url }}">
         {{ article.title }}
       </a> <span>•</span>
       {% include read_time.html %}
@@ -17,7 +17,7 @@
   {% endfor %}
 </ul>
 {% else %}
-### Drafts
+<h3 class="post-title">Drafts</h3>
   {% for article in site.articles %}
     {% unless article.published %}
       {% capture count %}{{ count | plus: 1 }}{% endcapture %}

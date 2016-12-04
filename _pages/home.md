@@ -4,7 +4,7 @@ title: Home
 permalink: /
 ---
 
-[<amp-img width="600" height="300" layout="responsive" src="/assets/images/landing_headlines.png"></amp-img>]({{"/courses/get-your-free-guide-on-less-is-more/index.html" | relative_url }})
+[<amp-img width="600" height="300" layout="responsive" src="/assets/images/landing_headlines.png"></amp-img>]({{"/courses/get-your-free-guide-on-less-is-more" | relative_url }})
 
 You took the mandatory med courses. You spent quality time diligently following what your teachers taught you. You are not deficient in skills. You were different from your techy friends. You wanted to make an impact in the lives of people.
 
@@ -14,7 +14,7 @@ The world has transformed while you were busy pouring yourself over medical book
 
 You don't have to tread the lonely path anymore! Welcome.
 
-[Start here.](/courses/get-your-free-guide-on-less-is-more/index.html)
+[Start here.](/courses/get-your-free-guide-on-less-is-more)
 
 ---------------------
 {% if site.articles[0] %}
@@ -23,7 +23,7 @@ You don't have to tread the lonely path anymore! Welcome.
   <ul>
   {% for article in site.articles limit: 3 %}
     <li>
-      <a href="{{ site.baseurl }}{{ article.url }}index.html">
+      <a href="{{ site.baseurl }}{{ article.url }}">
         {{ article.title }}
       </a>
     </li>

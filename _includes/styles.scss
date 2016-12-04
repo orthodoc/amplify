@@ -34,8 +34,8 @@ $rs: 16px;
 $font-serif: Georgia,Cambria,"Times New Roman",Times,'Lora', serif;
 $font-sans: "Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-serif;
 
-$font-body: "Arimo", "Open Sans", "Helvetica Neue", "sans-serif";
-$font-heading: "Hind", "Open Sans", "sans-serif";
+$font-body: "Open Sans", "Helvetica Neue", "sans-serif";
+$font-heading: "Raleway", "Source Sans Pro", "Oxygen" , "Roboto Slab", "Hind", "sans-serif";
 
 @mixin respond-to($breakpoint) {
   @media only screen and (max-width: $breakpoint + px) {
@@ -53,7 +53,7 @@ main {
 }
 
 body {
-  background-color: #fff;
+  background-color: #ffffff;
   font-family: $font-body;
   margin: 0;
   padding: 0;
@@ -64,6 +64,7 @@ body {
   -webkit-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig";
+  color: #363B3D;
 }
 
 .site-header {
@@ -79,20 +80,20 @@ body {
   .page-links {
       display: block;
       position: absolute;
-      top: 10px;
+      top: 26px;
       right: $rs;
       font-weight: 200;
       font-style: normal;
       font-size: 18px;
       line-height: 30px;
       .nav-separator {
-        color: #ab3e16;
+        color: #363B3D;
       }
       a {
         text-decoration: none;
-        color: #999999;
+        color: #363B3D;
         &:hover {
-          color: #333333;
+          color: #107895;
         }
       }
   }
@@ -169,7 +170,7 @@ body {
     .post-meta {
       display: block;
       font-size: 16px;
-      color: #999999;
+      color: #848586;
       line-height: 1.5;
       a {
         color: #b3b3b1;
@@ -234,6 +235,7 @@ body {
     font-family: $font-body;
   }
   .post-title {
+    font-family: $font-heading;
     font-weight: 700;
     font-style: normal;
     letter-spacing: -0.04em;
@@ -256,7 +258,7 @@ body {
     text-indent: -9999px;
   }
   .post-meta-text {
-    color: #b3b3b1;
+    color: #848586;
     letter-spacing: -0.02em;
     font-weight: 400;
     font-style: normal;
@@ -270,7 +272,7 @@ body {
   .post-content {
     width: 100%;
     font-family: $font-body;
-    color: #333333;
+    color: #363b3d;
     h1, h2, h3 {
       font-family: $font-heading;
     }
@@ -307,12 +309,12 @@ body {
     p {
       font-weight: 400;
       font-style: normal;
-      font-size: 22px;
+      font-size: 18px;
       line-height: 1.59;
       letter-spacing: -.002em;
       margin-top: 30px;
       margin-bottom: 0;
-      color: #333333;
+      color: #363b3d;
       -webkit-hyphens: auto;
       -moz-hyphens: auto;
       hyphens: auto;
@@ -369,8 +371,8 @@ body {
       padding: 0;
       font-weight: 400;
       font-style: normal;
-      font-size: 23px;
-      line-height: 30px;
+      font-size: 18px;
+      line-height: 1.59;
       margin-left: 15px;
       margin-bottom: 12px;
       padding-top: 2px;
@@ -390,7 +392,7 @@ body {
     li:before {
     content: "+";
     padding-right: 8px;
-    color: #ab3e16;
+    color: #107895;
     }
     ul.article-list {
       li {
@@ -547,9 +549,4 @@ pre {
     padding-right: 0;
     padding-left: 0;
   }
-}
-
-.ck_form .ck_form_title {
-  margin-top: 0px;
-  padding-top: 0px;
 }
